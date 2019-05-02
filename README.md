@@ -18,7 +18,17 @@ n.boot
 
 n.rec(true, true, true, true)
 
-4 You can rewrite the Buffers during an improvisation, just mantain the true argument for the Buffer you want to rewrite.
+4 To listen the Buffers run this lines:
+
+Synth(\b1play)
+
+Synth(\b2play)
+
+Synth(\b3play)
+
+Synth(\b4play)
+
+5 You can rewrite the Buffers during an improvisation, just mantain the true argument for the Buffer you want to rewrite.
 
 n.rec(false, true, false, true)
 
