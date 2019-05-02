@@ -43,12 +43,12 @@ RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneActi
 
 // Synth Buffer Mono
 (
-SynthDef(\b1play, {|rate=1, st=0, pb1l=0, ab1l=1, atb1l=0.01, rb1l=0.1, ob1l=0|
+SynthDef(\b1play, {|rate=1, st=0, pb1=0, ab1=1, atb1=0.01, rb1=0.1, ob1=0|
 	var sen, env;
 	sen = PlayBuf.ar(~buf1.numChannels, ~buf1.bufnum, rate, startPos:st);
-	sen = Pan2.ar(sen, pb1l, ab1l);
-	env = EnvGen.kr(Env.perc(atb1l, rb1l), doneAction:2);
-	Out.ar(ob1l, sen * env);
+	sen = Pan2.ar(sen, pb1, ab1);
+	env = EnvGen.kr(Env.perc(atb1, rb1), doneAction:2);
+	Out.ar(ob1, sen * env);
 }).add
 );
 
