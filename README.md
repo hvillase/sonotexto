@@ -32,4 +32,13 @@ Synth(\b4play)
 
 n.rec(false, true, false, true)
 
+## Mapping
+Each SynthDef have the next arguments:
 
+b1play: rate = rate, st = startPos, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out 
+
+b2play: rate = rate, st = startPos, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
+
+b3play: rate = rate, st = startPos, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
+
+b4play: rate = rate, st = startPos, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
