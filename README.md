@@ -1,5 +1,5 @@
 # SonoTexto
-Small Library and Class to record and play Buffers in SuperCollider. I write this Library and Class to improvise with musicians that impovise with and acoustic instrument, so I can record small Buffers of the Instrument in the moment of the improvisation.
+Small Library and Class to record and play Buffers in SuperCollider. I write this Library and Class to improvise with musicians that play acoustic instruments, so I can record small Buffers of the Instrument in the moment of the improvisation.
 
 The Library consist of 4 Buffers, 2 mono and 2 stereo. Odd Buffers are mono and even Buffers are stereo.
 
