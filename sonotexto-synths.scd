@@ -43,11 +43,11 @@ RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneActi
 
 // Synth Buffer Mono
 (
-SynthDef(\b1play, {|rate=1, st=0, pb1=0, ab1=1, atb1=0.01, rb1=0.1, ob1=0|
+SynthDef(\b1play, {|rate=1, st=0, pb1=0, ab1=1, atb1=0.01, sb1=1, rb1=0.1, ob1=0|
 	var sen, env;
 	sen = PlayBuf.ar(~buf1.numChannels, ~buf1.bufnum, rate, startPos:st);
 	sen = Pan2.ar(sen, pb1, ab1);
-	env = EnvGen.kr(Env.perc(atb1, rb1), doneAction:2);
+	env = EnvGen.kr(Env.new([0, 1, 1, 0], [atb1, sb1, rb1] ), doneAction: 2);
 	Out.ar(ob1, sen * env);
 }).add
 );
@@ -64,11 +64,11 @@ SynthDef(\b2play, {|rate=1, st=0, ab2=1, atb2=0.1, sb2=1, rb2=0.1, ob2=0|
 
 // Synth Buffer Mono
 (
-SynthDef(\b3play, {|rate=1, st=0, pb3=0, ab3=1, atb3=0.01, rb3=0.1, ob3=0|
+SynthDef(\b3play, {|rate=1, st=0, pb3=0, ab3=1, atb3=0.01, sb3=1, rb3=0.1, ob3=0|
 	var sen, env;
 	sen = PlayBuf.ar(~buf3.numChannels, ~buf3.bufnum, rate, startPos:st);
 	sen = Pan2.ar(sen, pb3, ab3);
-	env = EnvGen.kr(Env.perc(atb3, rb3), doneAction:2);
+	env = EnvGen.kr(Env.new([0, 1, 1, 0], [atb3, sb3, rb3] ), doneAction: 2);
 	Out.ar(ob3, sen * env);
 }).add
 );
