@@ -5,6 +5,7 @@
 s.boot;
 
 // Assign SonoTexto to a variable
+
 n = SonoTexto;
 
 // Start SonoTexto
@@ -17,20 +18,25 @@ n.rec(true, true, true, true);
 
 // Play the Buffers
 
-Synth(\b1play);
+Synth(\b1);
 
-Synth(\b2play);
+Synth(\b2);
 
-Synth(\b3play);
+Synth(\b3);
 
-Synth(\b4play);
+Synth(\b4);
 
 // You should declare the Synth each time you want to reproduce the Buffer. You can modify some parameters as the sustain of the Buffer. The Buffers 1 and 2 are 5 seconds duration and 2 and 4 ar 10 seconds duration.
 
-Synth(\b1play, [\sb1, 5]);
+Synth(\b1, [\sb1, 5]);
 
-Synth(\b2play, [\sb2, 5]);
+Synth(\b2, [\sb2, 5]);
 
-Synth(\b3play, [\sb3, 10]);
+Synth(\b3, [\sb3, 10]);
 
-Synth(\b4play, [\sb4, 10]);
+Synth(\b4, [\sb4, 10]);
+
+
+// Write the content of a Buffer in the Recordings path. Just one at time in order to no overwrite the buffers.
+
+n.write(false, false, false, true);

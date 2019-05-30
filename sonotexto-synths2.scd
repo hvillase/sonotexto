@@ -17,6 +17,28 @@
 ~buf4 = Buffer.alloc(s, s.sampleRate * ~durb4, 2);
 
 // Synths to record mono and stereo Buffer
+
+SynthDef(\brec, {|in = 0, ovdub = 0, buf|
+RecordBuf.ar(SoundIn.ar(in), buf, 0, 1, ovdub, loop:0, doneAction:2);
+}).add
+
+b=Synth(\brec,[\buf, ~buf1.bufnum])
+b.set(\buf,  ~buf2.bufnum)
+
+c=Synth(\bplay,[\buf, ~buf1])
+
+
+SynthDef(\bplay, {|rate=1, st=0, pb1=0, ab1=1, atb1=0.01, sb1=1, rb1=0.1, ob1=0,buf|
+	var sen, env;
+	sen = PlayBuf.ar(buf.numChannels, buf.bufnum, rate, startPos:st);
+	sen = Pan2.ar(sen, pb1, ab1);
+	env = EnvGen.kr(Env.new([0, 1, 1, 0], [atb1, sb1, rb1] ), doneAction: 2);
+	Out.ar(ob1, sen * env);
+}).add
+
+
+
+
 (
 SynthDef(\b1rec, {|in = 0, ovdub = 0|
 RecordBuf.ar(SoundIn.ar(in), ~buf1.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
