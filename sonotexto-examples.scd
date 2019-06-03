@@ -37,6 +37,6 @@ Synth(\b3, [\sb3, 10]);
 Synth(\b4, [\sb4, 10]);
 
 
-// Write the content of a Buffer in the Recordings path. Just one at time in order to no overwrite the buffers.
+// Write the content of a Buffer in the Recordings path. Just one at time in order to not overwrite the buffers.
 
 n.write(false, false, false, true);
