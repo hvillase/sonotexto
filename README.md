@@ -1,10 +1,12 @@
 # SonoTexto
-A SuperCollider Class to record and play Buffers. I write this Class to improvise with musicians that play acoustic instruments, so I can record small Buffers of the Instrument in the moment of the improvisation.
+A SuperCollider Class to record and play Buffers. I write this Class to improvise with musicians that play acoustic instruments, so I can record small Buffers of the instruments in the moment of the improvisation.
 
 The Class call a document that contains 4 Buffers, 2 mono and 2 stereo. Odd Buffers are mono and even Buffers are stereo.
 
+Be aware of feedback when you use this Class with big sound systems.
+
 ## Instructions
-Download the repository and put the folder in you SuperCollider Extentions.
+Download the repository and put the folder in your SuperCollider Extentions.
 
 1 Open a new file in SuperCollider and boot SC.
 
@@ -14,7 +16,7 @@ n = SonoTexto
 
 n.boot
 
-3 In order to record the four Buffers write this line.
+3 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer.
 
 n.rec(true, true, true, true)
 

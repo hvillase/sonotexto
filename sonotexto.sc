@@ -1,7 +1,7 @@
 SonoTexto {
 
 	*boot{
-		SonoTexto.synths;
+		this.synths;
 		^"SonoTexto Ready"
 	}
 
