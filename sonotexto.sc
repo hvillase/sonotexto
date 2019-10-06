@@ -19,10 +19,10 @@ SonoTexto {
 	}
 
 	*write{ arg b1 = false, b2 = false, b3 = false, b4 = false;
-		if(b1, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/st" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
-		if(b2, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/st" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
-		if(b3, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/st" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
-		if(b4, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/st" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
+		if(b1, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/b1" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
+		if(b2, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/b2" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
+		if(b3, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/b3" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
+		if(b4, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/b4" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"});
 		^"SonoTexto Write"
 	}
 }
