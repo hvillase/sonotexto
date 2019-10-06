@@ -6,9 +6,9 @@ The Class call a document that contains 4 Buffers, 2 mono and 2 stereo. Odd Buff
 Be aware of feedback when you use this Class with big sound systems.
 
 ## Instructions
-Download the repository and put the folder in your SuperCollider Extentions.
+Download the repository and put the folder in your SuperCollider Extentions. Make a directory called sonotexto in the SuperCollider Recrodings folder.
 
-1 Open a new file in SuperCollider and boot SC.
+1 Open a new file in SuperCollider and boot SuperCollider.
 
 2 Write this code lines:
 
@@ -34,7 +34,7 @@ Synth(\b4)
 
 n.rec(false, true, false, true)
 
-## Mapping
+## Mapping arguments
 Each SynthDef have the next arguments:
 
 \b1: rate = rate, st = startPos, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
