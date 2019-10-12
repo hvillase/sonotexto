@@ -34,13 +34,17 @@ Synth(\b4)
 
 n.rec(false, true, false, true)
 
+6 You can keep the Buffer's sound.
+
+n.write(true, true, true, true)
+
 ## Mapping arguments
 Each SynthDef have the next arguments:
 
-\b1: rate = rate, st = startPos, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
+\b1: rate = rate, st = startPos, lp = loop, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
 
-\b2: rate = rate, st = startPos, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
+\b2: rate = rate, st = startPos, lp = loop, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
 
-\b3: rate = rate, st = startPos, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
+\b3: rate = rate, st = startPos, lp = loop, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
 
-\b4: rate = rate, st = startPos, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
+\b4: rate = rate, st = startPos, lp = loop, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
