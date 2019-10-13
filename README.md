@@ -6,21 +6,23 @@ The Class call a document that contains 4 Buffers, 2 mono and 2 stereo. Odd Buff
 Be aware of feedback when you use this Class with big sound systems.
 
 ## Instructions
-Download the repository and put the folder in your SuperCollider Extentions. Make a directory called sonotexto in the SuperCollider Recrodings folder.
+1 Download or clone the repository and put the folder in your SuperCollider Extentions. 
 
-1 Open a new file in SuperCollider and boot SuperCollider.
+2 Make a directory called sonotexto in the SuperCollider's Recrodings folder.
 
-2 Write this code lines:
+3 Open a new file in SuperCollider and boot SuperCollider.
+
+4 Write this code lines:
 
 n = SonoTexto
 
 n.boot
 
-3 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer.
+5 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer.
 
 n.rec(true, true, true, true)
 
-4 To listen the Buffers run this lines:
+6 To listen the Buffers run this lines:
 
 Synth(\b1)
 
@@ -30,11 +32,11 @@ Synth(\b3)
 
 Synth(\b4)
 
-5 You can rewrite the Buffers during the improvisation, just mantain the true argument for the Buffer you want to rewrite.
+7 You can rewrite the Buffers during the improvisation, just mantain the true argument for the Buffer you want to rewrite.
 
 n.rec(false, true, false, true)
 
-6 You can keep the Buffer's sound.
+8 You can keep the Buffer's sound.
 
 n.write(true, true, true, true)
 
