@@ -1,5 +1,5 @@
 # SonoTexto
-A SuperCollider Class to record and play Buffers. I write this Class to improvise with musicians that play acoustic instruments, so I can record small Buffers of the instruments in the moment of the improvisation.
+A SuperCollider Class to record and play Buffers. I write this Class to improvise with musicians that play acoustic instruments, so I can record small Buffers of the instruments in the moment of the improvisation. Also it can be used to record small fragments of sound environment in order to perform a live coding session with sound as material.
 
 The Class call a document that contains 4 Buffers, 2 mono and 2 stereo. Odd Buffers are mono and even Buffers are stereo.
 
