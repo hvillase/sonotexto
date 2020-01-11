@@ -3,11 +3,6 @@ SonoTexto {
 	classvar <st;
 
 	*boot {
-		this.synths;
-		^"SonoTexto Ready"
-	}
-
-	*synths {
 		thisProcess.interpreter.executeFile((Platform.userExtensionDir ++ "/sonotexto/sonotexto-synths.scd").standardizePath);
 		^"SonoTexto Synths"
 	}
