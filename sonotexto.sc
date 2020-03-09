@@ -16,12 +16,12 @@ SonoTexto {
 	}
 
 	*write { arg b1 = false, b2 = false, b3 = false, b4 = false;
-		Routine.new({
-			1.do{if(b1, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.yield};
-			1.do{if(b2, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.yield};
-			1.do{if(b3, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.yield};
-			1.do{if(b4, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.yield};
-		}).play
+		Task {
+			1.do{if(b1, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.wait};
+			1.do{if(b2, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.wait};
+			1.do{if(b3, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.wait};
+			1.do{if(b4, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16")}, {"nil"}); 0.06.wait};
+		}.play
 		^"SonoTexto Write"
 	}
 
