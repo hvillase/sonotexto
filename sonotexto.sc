@@ -28,6 +28,6 @@ SonoTexto {
 	*read { arg server;
 		st = Dictionary.new;
 		st.add(\st -> PathName(Platform.recordingsDir +/+ "/sonotexto/").entries.collect({arg grabacion; Buffer.read(server ? Server.default, grabacion.fullPath)}));
-		^"SonoTexto Sounds"
+		^"SonoTexto Sounds "
 	}
 }
