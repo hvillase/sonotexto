@@ -64,12 +64,21 @@ Each SynthDef have these arguments:
 ```
 
 **rate**: you can modifiy the speed of the sample in values other than 0, eg. 1 is normal speed, 2 is twice the speed, 0.5 y half the speed. You can use minus values as -1 and if the value of loop parameter is 1, the you can play samples in reverse.
+
 **tg**: this returns the playback to the start pioint of the sample depending on a frequency. You can put values from 0 to higher.
+
 **st**: this is the initial point from which the sample starts to play. You can modifiy this number dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at the half of the sample. Be careful not to divide in 1, otherwhise you have no sound becaus you are starting at the end of the sample.
+
 **loop** you can put values form 0 to 1. 0 is loop inactive, 1 is loop active.
+
 **pb1** or **pb3** is the pan value for buffer 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
+
 **ab1**...**abn** this is the amplitude value. Usually you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound on the moment some times you need to go beyond 1. You may listen how much you go beyond 1, and be extremely careful if you record again a buffer as you can have a strong feedback. I looking fir a solution to have more convenient way to approach this parameter.
+
 **atb1** ... **atbn**: this is the attack time value.
+
 **sb1** ... **sbn**: this is the sustain time value. Notice that buffers 1 and 2 have 5 seconds durations, son this value can be between 0 and 5.
+
 **rb1** ... **rbn**: this is the sustain time value.
+
 **ob1** ... **obn**: this is the output. The default is 0, you can modify it to another value if you have a multichannel sound card or want to send your sample through another bus, eg. an effect bus.
