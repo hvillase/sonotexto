@@ -82,3 +82,15 @@ Each SynthDef have these arguments:
 **rb1** ... **rbn**: this is the sustain time value.
 
 **ob1** ... **obn**: this is the output. The default is 0, you can modify it to another value if you have a multichannel sound card or want to send your sample through another bus, eg. an effect bus.
+
+### An example with parameters
+
+```
+Synth(\b1, [\rate, -1, \lp, 1, \pb1, -0.9, \ab1, 1, \atb1, 1, \sb1, 2, \rb1, 1]);
+
+Synth(\b2, [\rate, 2]);
+
+Synth(\b3, [\st, ~buf3.numFrames/2, \pb3, 0.5]);
+
+Synth(\b4, [\atb4, 0.5, \sb4, 8, \rb4, 1.5]);
+```
