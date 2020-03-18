@@ -69,11 +69,11 @@ Each SynthDef have these arguments:
 
 **st**: this is the initial point from which the sample starts to play. You can modifiy this number dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at the half of the sample. Be careful not to divide in 1, otherwhise you have no sound becaus you are starting at the end of the sample.
 
-**loop** you can put values form 0 to 1. 0 is loop inactive, 1 is loop active.
+**loop**: you can put values form 0 to 1. 0 is loop inactive, 1 is loop active.
 
-**pb1** or **pb3** is the pan value for buffer 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
+**pb1**: or **pb3** is the pan value for buffer 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
 
-**ab1**...**abn** this is the amplitude value. Usually you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound on the moment some times you need to go beyond 1. You may listen how much you go beyond 1, and be extremely careful if you record again a buffer as you can have a strong feedback. I looking fir a solution to have more convenient way to approach this parameter.
+**ab1**...**abn**: this is the amplitude value. Usually you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound on the moment some times you need to go beyond 1. You may listen how much you go beyond 1, and be extremely careful if you record again a buffer as you can have a strong feedback. I looking fir a solution to have more convenient way to approach this parameter.
 
 **atb1** ... **atbn**: this is the attack time value.
 
