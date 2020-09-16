@@ -40,3 +40,11 @@ Synth(\b4, [\sb4, 10]);
 // Write the content of a Buffer in the Recordings path. Just one at time in order to not overwrite the buffers.
 
 n.write(false, false, false, true);
+
+// Read the buffer dictionary pointing to your your saved sonotexto recordings folder.
+
+n.read;
+n.st[\st][2];
+n.st[\st][1].play;
+n.st[\st][(n.st.[\st].size)-1].play; // to look for last recordings
+n.st[\st][4].plot;

@@ -1,0 +1,56 @@
+TITLE:: SonoTexto
+summary:: Records small fragments of sound in temporal memory.
+categories:: Undocumented classes
+related:: Classes/SomeRelatedClass, Reference/SomeRelatedStuff
+
+DESCRIPTION::
+Records input into a Buffer. The recording time is set to 5 and 10 seconds in mono and stereo. Is possible to save sound into hard disk and the read. It requieres a folder called sonotexto in the Recordins path of SuperCollider.
+
+
+First code examples:
+
+code::
+_some_example_code_
+::
+
+CLASSMETHODS::
+
+METHOD:: write
+
+argument:: b1
+Writes Buffer 1 to hard disc when true.
+
+argument:: b2
+Writes Buffer 2 to hard disc when true.
+
+argument:: b3
+Writes Buffer 3 to hard disc when true.
+
+argument:: b4
+Writes Buffer 4 to hard disc when true.
+
+METHOD:: st
+
+METHOD:: boot
+Boots the Class to operate.
+
+METHOD:: read
+argument:: server
+
+METHOD:: rec
+argument:: b1
+argument:: b2
+argument:: b3
+argument:: b4
+
+
+INSTANCEMETHODS::
+
+
+EXAMPLES::
+
+code::
+t = SonoTexto;
+t.boot;
+t.rec(true, false, false, false);
+::
