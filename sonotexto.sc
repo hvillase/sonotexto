@@ -3,6 +3,8 @@ SonoTexto {
 	classvar <st;
 
 	*boot {
+		if(File.existsCaseSensitive(Platform.recordingsDir ++ "/sonotexto"), {"sonotexto".postln}, {"Not sounds Folder in your Recordings path, please create one with the name 'sonotexto'".postln});
+
 		thisProcess.interpreter.executeFile((Platform.userExtensionDir ++ "/sonotexto/sonotexto-synths.scd").standardizePath);
 		^"SonoTexto Synths"
 	}
