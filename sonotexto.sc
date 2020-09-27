@@ -36,7 +36,7 @@ SonoTexto {
 		^"SonoTexto Write"
 	}
 
-	// The read method allows you to access the sounds of your sonotexto folder. A more accurate way is using SampleTexto class.
+	// the read method allows you to access the sounds of your sonotexto folder. A more accurate way is using SampleTexto class.
 	*read { arg server;
 		st = Dictionary.new;
 		st.add(\st -> PathName(Platform.recordingsDir +/+ "/sonotexto/").entries.collect({arg grabacion; Buffer.read(server ? Server.default, grabacion.fullPath)}));

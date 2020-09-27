@@ -1,16 +1,18 @@
 TITLE:: SonoTexto
-summary:: Records small fragments of sound in temporal memory.
+summary:: Record small fragments of sound in temporal memory.
 categories:: Undocumented classes
 related:: Classes/SomeRelatedClass, Reference/SomeRelatedStuff
 
 DESCRIPTION::
-Records input into a Buffer. The recording time is set to 5 and 10 seconds in mono and stereo. Is possible to save sound into hard disk and the read. It requieres a folder called sonotexto in the Recordins path of SuperCollider.
+Record the input into a Buffer. The recording time is set to 5 and 10 seconds in mono and stereo. Is possible to save the sounds into hard disk and the read. It requieres a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
 
 
 First code examples:
 
 code::
-_some_example_code_
+~a = SonoTexto;
+~a = SonoTexTo.boot;
+~a = SonoTexto(true);
 ::
 
 CLASSMETHODS::
@@ -30,6 +32,7 @@ argument:: b4
 Writes Buffer 4 to hard disc when true.
 
 METHOD:: st
+A method to read samples of your sonotexto folder.
 
 METHOD:: boot
 Boots the Class to operate.
@@ -50,7 +53,12 @@ INSTANCEMETHODS::
 EXAMPLES::
 
 code::
-t = SonoTexto;
-t.boot;
-t.rec(true, false, false, false);
+~a = SonoTexto;
+~a.boot;
+~a.rec(true, false, false, false);
+~a.write(true, false, false, false);
+
+(
+Pdef(\sonotexto, Pbind(\instrument, \b1)).play
+)
 ::
