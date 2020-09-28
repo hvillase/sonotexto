@@ -8,11 +8,11 @@ Be aware of feedback when you use this Class with big sound systems.
 ## Instructions
 1 Download or clone the repository and put the folder in your SuperCollider Extentions.
 
-2 Make a directory called *sonotexto* in the SuperCollider's Recrodings folder.
+2 Make a directory called *sonotexto* in your SuperCollider Recordings folder.
 
 3 Open a new file in SuperCollider and boot SuperCollider.
 
-4 Write this code lines:
+4 Write this code:
 
 ```
 n = SonoTexto
