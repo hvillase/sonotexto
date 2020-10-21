@@ -7,7 +7,7 @@ SonoTexto {
 	*boot {
 
 		// this if alerts when the sound folder sonotexto is not in Recordings path.
-		if(File.existsCaseSensitive(Platform.recordingsDir ++ "/sonotexto"), {"sonotexto folder is on place".postln}, {"Not sounds Folder in your Recordings path, please create one with the name 'sonotexto'".postln});
+		if(File.existsCaseSensitive(Platform.recordingsDir ++ "/sonotexto"), {"sonotexto folder is on place".postln}, {"No sound folder is in your Recordings path, please create one with the name 'sonotexto'".postln});
 
 		// this piece of code executes a document with the SynthDefs requiered to work.
 		thisProcess.interpreter.executeFile((Platform.userExtensionDir ++ "/sonotexto/sonotexto-synths.scd").standardizePath);
