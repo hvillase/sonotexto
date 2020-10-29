@@ -73,7 +73,7 @@ Each SynthDef have these arguments:
 
 **pb1**: or **pb3** is the pan value for buffer 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
 
-**nrm**: is the value of the mormalization of sound, between 0.0 and 1.0, be aware to play sounds with maximum value 1.0.
+**nrm**: is the value of the normalization of sound, between 0.0 and 1.0, be aware to play sounds with maximum value 1.0, default value is 0.5.
 
 **ab1** ... **abn**: this is the amplitude value. Usually you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound on the moment some times you need to go beyond 1. You may listen how much you go beyond 1, and be extremely careful if you record again a buffer as you can have a strong feedback. I looking fir a solution to have more convenient way to approach this parameter.
 
