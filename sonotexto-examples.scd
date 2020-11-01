@@ -1,6 +1,6 @@
-// Example 1: record sound to TecnoTexto's Buffers
+// Example 1: record sound to SonoTexto's Buffers
 
-// In order to record sound to the Buffers check your sound options to assignate an input device as your computer's micro
+// In order to record sound to the Buffers check your sound options to assignate an input device as your computer's micro or sound card.
 
 s.boot;
 
@@ -14,7 +14,9 @@ n.boot;
 
 // Record or rewrite sound to the Buffers. In this case four Buffers.
 
-n.rec(true, true, true, true);
+n.rec(true); // this records the first buffer
+
+n.rec(false, false, false, true); // this records the last buffer
 
 // Play the Buffers
 
@@ -37,14 +39,16 @@ Synth(\b3, [\sb3, 10]);
 Synth(\b4, [\sb4, 10]);
 
 
-// Write the content of a Buffer in the Recordings path. Just one at time in order to not overwrite the buffers.
+// Write the content of a Buffer in the Recordings path.
 
-n.write(false, false, false, true);
+n.write(true); // this writes only the first buffer
 
-// Read the buffer dictionary pointing to your your saved sonotexto recordings folder.
+n.write(true, true, true, true); // this writes the four buffers
+
+// Read the buffer dictionary pointing to your sonotexto recordings folder.
 
 n.read;
 n.st[\st][2];
-n.st[\st][1].play;
-n.st[\st][(n.st.[\st].size)-1].play; // to look for last recordings
+n.st[\st][1].play; // this plays the sound in index 1
+n.st[\st][(n.st.[\st].size)-1].play; // to look for the last archive
 n.st[\st][4].plot;
