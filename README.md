@@ -20,10 +20,10 @@ n = SonoTexto
 n.boot
 ```
 
-5 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer.
+5 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer, 1 = true, 0 = false.
 
 ```
-n.rec(true, true, true, true)
+n.rec(1, 1, 1, 1)
 ```
 
 6 To listen the Buffers run this lines:
@@ -41,26 +41,26 @@ Synth(\b4)
 7 You can rewrite the Buffers during the improvisation, just mantain the true argument for the Buffer you want to rewrite.
 
 ```
-n.rec(false, true, false, true)
+n.rec(0, 1, 0, 1)
 ```
 
-8 You can keep the Buffer's sound.
+8 You can keep the Buffer's sound. 1 = True, 0 = False.
 
 ```
-n.write(true, true, true, true)
+n.write(1, 1, 1, 1)
 ```
 
 ## Mapping arguments
 Each SynthDef have these arguments:
 
 ```
-\b1: rate = rate, tg = trigger frequency, st = startPos, lp = loop, nrm = 0.5, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
+\b1: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
 
-\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, nrm = 0.5, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
+\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
 
-\b3: rate = rate, tg = trigger frequency, st = startPos, lp = loop, nrm = 0.5, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
+\b3: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
 
-\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, nrm = 0.5, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
+\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
 ```
 
 **rate**: you can modifiy the speed of the sample in values other than 0, eg. 1 is normal speed, 2 is twice the speed, 0.5 y half the speed. You can use minus values as -1 and if the value of loop parameter is 1, the you can play samples in reverse.
@@ -72,8 +72,6 @@ Each SynthDef have these arguments:
 **loop**: you can put values form 0 to 1. 0 is loop inactive, 1 is loop active.
 
 **pb1**: or **pb3** is the pan value for buffer 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
-
-**nrm**: is the value of the normalization of sound, between 0.0 and 1.0, be aware to play sounds with maximum value 1.0, default value is 0.5.
 
 **ab1** ... **abn**: this is the amplitude value. Usually you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound on the moment some times you need to go beyond 1. You may listen how much you go beyond 1, and be extremely careful if you record again a buffer as you can have a strong feedback. I looking fir a solution to have more convenient way to approach this parameter.
 

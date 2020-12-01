@@ -15,6 +15,7 @@ SonoTexto {
 	}
 
 	// the class method rec allows to rec one, or all, the available Buffers when argument is true.
+	// is possible to warn about which syhntdefs are available
 	*rec { arg b1 = 0, b2 = 0, b3 = 0, b4 = 0;
 		if(b1.asBoolean, {Synth(\b1rec); "Recording b1 mono file".postln}, {"nil"});
 		if(b2.asBoolean, {Synth(\b2rec); "Recording b2 stereo file".postln}, {"nil"});
