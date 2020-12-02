@@ -52,3 +52,5 @@ n.st[\st][2];
 n.st[\st][1].play; // this plays the sound in index 1
 n.st[\st][(n.st.[\st].size)-1].play; // to look for the last archive
 n.st[\st][4].plot;
+
+n.info;

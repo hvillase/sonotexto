@@ -43,4 +43,8 @@ SonoTexto {
 		st.add(\st -> PathName(Platform.recordingsDir +/+ "/sonotexto/").entries.collect({arg grabacion; Buffer.read(server ? Server.default, grabacion.fullPath)}));
 		^"SonoTexto Sounds "
 	}
+
+	*info {
+		("SonoTexto has " ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asSizedString(3) ++ " sounds recorded").postcln;
+	}
 }
