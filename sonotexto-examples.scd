@@ -14,9 +14,9 @@ n.boot;
 
 // Record or rewrite sound to the Buffers. In this case four Buffers.
 
-n.rec(true); // this records the first buffer
+n.rec(1); // this records the first buffer
 
-n.rec(false, false, false, true); // this records the last buffer
+n.rec(0, 0, 0, 1); // this records the last buffer
 
 // Play the Buffers
 
@@ -41,9 +41,9 @@ Synth(\b4, [\sb4, 10]);
 
 // Write the content of a Buffer in the Recordings path.
 
-n.write(true); // this writes only the first buffer
+n.write(1); // this writes only the first buffer
 
-n.write(true, true, true, true); // this writes the four buffers
+n.write(0, 0, 0, 1); // this writes the four buffers
 
 // Read the buffer dictionary pointing to your sonotexto recordings folder.
 
