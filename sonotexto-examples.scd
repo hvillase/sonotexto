@@ -48,9 +48,15 @@ n.write(0, 0, 0, 1); // this writes the four buffers
 // Read the buffer dictionary pointing to your sonotexto recordings folder.
 
 n.read;
+
 n.st[\st][2];
+
 n.st[\st][1].play; // this plays the sound in index 1
+
 n.st[\st][(n.st.[\st].size)-1].play; // to look for the last archive
+
 n.st[\st][4].plot;
+
+// Informs the number of samples in the  sonotexto folder
 
 n.info;
