@@ -7,7 +7,7 @@ SonoTexto {
 	*boot {
 
 		// this alerts when the sound folder sonotexto is not in the Recordings path.
-		if(File.existsCaseSensitive(Platform.recordingsDir ++ "/sonotexto"), {"sonotexto folder is in place".postln}, {"No sound folder is in your Recordings path, please create one with the name 'sonotexto'".postln});
+		if (File.existsCaseSensitive(Platform.recordingsDir ++ "/sonotexto"), {"sonotexto folder is in place".postln}, {"No sound folder is in your Recordings path, please create one with the name 'sonotexto'".postln});
 
 		// this executes a document with the SynthDefs requiered to work.
 		thisProcess.interpreter.executeFile((Platform.userExtensionDir ++ "/sonotexto/sonotexto-synths.scd").standardizePath);
@@ -17,10 +17,10 @@ SonoTexto {
 	// the class method rec allows to rec one, or all, the available Buffers when argument is true.
 	// is possible to warn about which syhntdefs are available
 	*rec { arg b1 = 0, b2 = 0, b3 = 0, b4 = 0;
-		if(b1.asBoolean, {Synth(\b1rec); "Recording b1 mono file".postln}, {"nil"});
-		if(b2.asBoolean, {Synth(\b2rec); "Recording b2 stereo file".postln}, {"nil"});
-		if(b3.asBoolean, {Synth(\b3rec); "Recording b3 mono file".postln}, {"nil"});
-		if(b4.asBoolean, {Synth(\b4rec); "Recording b4 stereo file".postln}, {"nil"});
+		if (b1.asBoolean, {Synth(\b1rec); "Recording b1 mono file".postln}, {"nil"});
+		if (b2.asBoolean, {Synth(\b2rec); "Recording b2 stereo file".postln}, {"nil"});
+		if (b3.asBoolean, {Synth(\b3rec); "Recording b3 mono file".postln}, {"nil"});
+		if (b4.asBoolean, {Synth(\b4rec); "Recording b4 stereo file".postln}, {"nil"});
 		^"SonoTexto Rec"
 	}
 
@@ -29,10 +29,10 @@ SonoTexto {
 
 		// this Task routine writes each Buffer in the hard disk when argument is true. It waits 60 miliseconds to avoid having the same name for all the Buffers.
 		Task {
-			1.do{if(b1.asBoolean, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b1 mono file".postln}, {"nil"}); 0.06.wait};
-			1.do{if(b2.asBoolean, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b2 stereo file".postln}, {"nil"}); 0.06.wait};
-			1.do{if(b3.asBoolean, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b3 mono file".postln}, {"nil"}); 0.06.wait};
-			1.do{if(b4.asBoolean, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b4 stereo file".postln}, {"nil"}); 0.06.wait};
+			1.do{if (b1.asBoolean, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b1 mono file".postln}, {"nil"}); 0.06.wait};
+			1.do{if (b2.asBoolean, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b2 stereo file".postln}, {"nil"}); 0.06.wait};
+			1.do{if (b3.asBoolean, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b3 mono file".postln}, {"nil"}); 0.06.wait};
+			1.do{if (b4.asBoolean, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b4 stereo file".postln}, {"nil"}); 0.06.wait};
 		}.play
 		^"SonoTexto Write"
 	}
