@@ -5,6 +5,8 @@ The class call a document that contains 4 Buffers, 2 mono and 2 stereo. Odd Buff
 
 Be aware of feedback when you use this Class with big sound systems.
 
+SonoTexto is part of a series of classes I am developing for my PhD in UNAM, with the support of CONACyT through the Posgraduate Music Program UNAM.
+
 ## Instructions
 1 Download or clone the repository and put the folder in your SuperCollider Extentions.
 
