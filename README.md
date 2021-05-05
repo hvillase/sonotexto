@@ -28,7 +28,7 @@ n.boot
 n.rec(1, 1, 1, 1)
 ```
 
-6 To listen the Buffers run this lines:
+6 To listen the Buffers run these lines:
 
 ```
 Synth(\b1)
@@ -65,11 +65,11 @@ Each SynthDef have these arguments:
 \b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
 ```
 
-**rate**: you can modifiy the speed of the sample in values other than 0, eg. 1 is normal speed, 2 is twice the speed, 0.5 y half the speed. You can use minus values as -1 and if the value of loop parameter is 1, the you can play samples in reverse.
+**rate**: you can modifiy the speed of the sample in values other than 0, eg. 1 is normal speed, 2 is twice the speed, 0.5 is half the speed. You can use minus values as -1 and if the value of loop parameter is 1, then you can play samples in reverse.
 
 **tg**: this returns the playback to the start pioint of the sample depending on a frequency. You can put values from 0 to higher.
 
-**st**: this is the initial point from which the sample starts to play. You can modifiy this number dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at the half of the sample. Be careful not to divide in 1, otherwhise you have no sound becaus you are starting at the end of the sample.
+**st**: this is the initial point from which the sample starts to play. You can modifiy this number multiplying or dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at the half of the sample. Be careful not to divide in 1, otherwhise you have no sound because you are starting at the end of the sample.
 
 **loop**: you can put values form 0 to 1. 0 is loop inactive, 1 is loop active.
 
