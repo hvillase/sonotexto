@@ -2,7 +2,7 @@
 
 Es una clase de SuperCollider para grabar sonido en Buffers y tocar con ellos en el momento. Comencé a escribir esta clase para improvisar junto a músicos que tocan instrumentos acústicos y después la adapté para hacer live coding desde cero con sonido grabado en el momento de la presentación. Además de grabar, la clase puede guardar los sonidos en el disco duro para utilizarlos de manera diferida.
 
-La clase llama a un documento que contiene 4 Buffers capace de alojar sonidos de 5 y 10 segundos de duración, 2 mono y 2 estereo. Los Buffers impares son mono y los pares son estéreo. Los buffers 1 y 2 graban 5 segundos y 3 y 4 10 segundos.
+La clase llama a un documento que contiene 4 Buffers capaces de alojar sonidos de 5 y 10 segundos de duración, 2 mono y 2 estéreo. Los Buffers impares son mono y los pares son estéreo. Los buffers 1 y 2 graban 5 segundos y los buffers 3 y 4 10 segundos.
 
 Ten cuidado con la retroalimentción cuando uses SonoTexto con sistemas de sonido grandes.
 
