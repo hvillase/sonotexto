@@ -23,14 +23,19 @@ n = SonoTexto
 
 n.boot
 ```
+5 Si usas SonoTexto por primera vez te alerta que falta la carpeta <sonotexto> en el directorio Recordings. Corre la siguiente línea para saber donde está ese directorio.
 
-5 Para grabar los cuatro Buffers escribe esta línea. Puedes escribir solo un buffer o reescribir cualquier buffer, 1 = verdadero, 0 = falso.
+```
+Platform.recordingsDir
+```
+
+6 Para grabar los cuatro Buffers escribe esta línea. Puedes escribir solo un buffer o reescribir cualquier buffer, 1 = verdadero, 0 = falso.
 
 ```
 n.rec(1, 1, 1, 1)
 ```
 
-6 Para escuchar los Buffers ejecuta estas líneas.
+7 Para escuchar los Buffers ejecuta estas líneas.
 
 ```
 Synth(\b1)
@@ -42,13 +47,13 @@ Synth(\b3)
 Synth(\b4)
 ```
 
-7 Puedes reescribir los Buffers durante la improvisación, solo manten el argumento verdadero para el Buffer que quieres reescribir.
+8 Puedes reescribir los Buffers durante la improvisación, solo manten el argumento verdadero para el Buffer que quieres reescribir.
 
 ```
 n.rec(0, 1, 0, 1)
 ```
 
-8 Puedes conservar el sonido del Buffer. 1 = verdadero, 0 = falso.
+9 Puedes conservar el sonido del Buffer. 1 = verdadero, 0 = falso.
 
 ```
 n.write(1, 1, 1, 1)

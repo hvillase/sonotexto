@@ -12,6 +12,10 @@ n = SonoTexto;
 
 n.boot;
 
+// If you run for the first time SonoTexto it awares you to make a directory called <sonotexto> in the Recordings dir. Run this line to know where the Recordings path is.
+
+Platform.recordingsDir;
+
 // Record or rewrite sound to the Buffers. In this case four Buffers.
 
 n.rec(1); // this records the first buffer

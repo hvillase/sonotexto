@@ -21,14 +21,19 @@ n = SonoTexto
 
 n.boot
 ```
+5 If you run for the first time SonoTexto it awares you to make a directory called <sonotexto> in the Recordings dir. Run this line to know where the Recordings path is.
 
-5 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer, 1 = true, 0 = false.
+```
+Platform.recordingsDir
+```
+
+6 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer, 1 = true, 0 = false.
 
 ```
 n.rec(1, 1, 1, 1)
 ```
 
-6 To listen the Buffers run these lines:
+7 To listen the Buffers run these lines:
 
 ```
 Synth(\b1)
@@ -40,13 +45,13 @@ Synth(\b3)
 Synth(\b4)
 ```
 
-7 You can rewrite the Buffers during the improvisation, just mantain the true argument for the Buffer you want to rewrite.
+8 You can rewrite the Buffers during the improvisation, just mantain the true argument for the Buffer you want to rewrite.
 
 ```
 n.rec(0, 1, 0, 1)
 ```
 
-8 You can keep the Buffer's sound. 1 = True, 0 = False.
+9 You can keep the Buffer's sound. 1 = True, 0 = False.
 
 ```
 n.write(1, 1, 1, 1)
