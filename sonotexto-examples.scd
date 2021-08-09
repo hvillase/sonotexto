@@ -12,7 +12,7 @@ n = SonoTexto;
 
 n.boot;
 
-// If you run for the first time SonoTexto it awares you to make a directory called <sonotexto> in the Recordings dir. Run this line to know where the Recordings path is.
+// If you run for the first time SonoTexto it awares you to make a directory called sonotexto in the Recordings dir. Run this line to know where the Recordings path is.
 
 Platform.recordingsDir;
 

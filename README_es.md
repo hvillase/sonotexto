@@ -23,7 +23,7 @@ n = SonoTexto
 
 n.boot
 ```
-5 Si usas SonoTexto por primera vez te alerta que falta la carpeta <sonotexto> en el directorio Recordings. Corre la siguiente línea para saber donde está ese directorio.
+5 Si usas SonoTexto por primera vez te alerta que falta la carpeta sonotexto en el directorio Recordings. Corre la siguiente línea para saber donde está ese directorio.
 
 ```
 Platform.recordingsDir
