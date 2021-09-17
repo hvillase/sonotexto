@@ -1,18 +1,18 @@
 TITLE:: SonoTexto
-summary:: Record small fragments of sound in temporal memory.
+summary:: Record small fragments of sound in buffers.
 categories:: Undocumented classes
 related:: Classes/SomeRelatedClass, Reference/SomeRelatedStuff
 
 DESCRIPTION::
-Record the input into a Buffer. The recording time is set to 5 and 10 seconds in mono and stereo. Is possible to save the sounds into hard disk and the read. It requieres a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
+Record the input into Buffer. The recording time is set up to 5 and 10 seconds in mono and stereo options. It is possible to save the recorded sounds into the hard disk and then read them later. It requieres to make a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
 
 
 First code examples:
 
 code::
 ~a = SonoTexto;
-~a = SonoTexTo.boot;
-~a = SonoTexto(true);
+~a = SonoTexto.boot;
+~a = SonoTexto(1, 0, 0, 0);
 ::
 
 CLASSMETHODS::
@@ -20,16 +20,16 @@ CLASSMETHODS::
 METHOD:: write
 
 argument:: b1
-Writes Buffer 1 to hard disc when true.
+Writes Buffer 1 to hard disc when is 1.
 
 argument:: b2
-Writes Buffer 2 to hard disc when true.
+Writes Buffer 2 to hard disc when is 1.
 
 argument:: b3
-Writes Buffer 3 to hard disc when true.
+Writes Buffer 3 to hard disc when is 1.
 
 argument:: b4
-Writes Buffer 4 to hard disc when true.
+Writes Buffer 4 to hard disc when is 1.
 
 METHOD:: st
 A method to read samples of your sonotexto folder.
@@ -39,13 +39,20 @@ Boots the Class to operate.
 
 METHOD:: read
 argument:: server
+Reads the sound files of the folder sonotexto.
 
 METHOD:: rec
 argument:: b1
-argument:: b2
-argument:: b3
-argument:: b4
+Records Buffer 1 to hard disc when 1.
 
+argument:: b2
+Records Buffer 2 to hard disc when 1.
+
+argument:: b3
+Records Buffer 3 to hard disc when 1.
+
+argument:: b4
+Records Buffer 4 to hard disc when 1.
 
 INSTANCEMETHODS::
 
@@ -53,12 +60,12 @@ INSTANCEMETHODS::
 EXAMPLES::
 
 code::
-~a = SonoTexto;
-~a.boot;
-~a.rec(true, false, false, false);
-~a.write(true, false, false, false);
+~a = SonoTexto; // creates sonotexto object
+~a.boot; // prepares the four buffers to record sound.
+~a.rec(1, 0, 0, 0); // records buffer 1 when is 1 (true)
+~a.write(1, 0, 0, 0); // writes the sound of buffer 1 to hard disk when is 1 (true)
 
 (
-Pdef(\sonotexto, Pbind(\instrument, \b1)).play
+Pdef(\sonotexto, Pbind(\instrument, \b1)).play;
 )
 ::

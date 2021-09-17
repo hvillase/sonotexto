@@ -27,6 +27,14 @@ n.boot
 Platform.recordingsDir
 ```
 
+Then you can create it programatically using the method unixCmd by copying the path that appears in your post window and telling SuperCollider to make a directory called sonotexto. Replace path/to/Recordings with the path you have obtained in your Post window.
+
+```
+"cd path/to/Recordings".unixCmd;
+
+"mkdir path/to/Recordings/sonotexto".unixCmd;
+```
+
 6 In order to record the four Buffers write this line. You can write just one buffer or rewrite any buffer, 1 = true, 0 = false.
 
 ```
