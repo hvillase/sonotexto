@@ -27,13 +27,17 @@ SonoTexto {
 	// the class method *write allows to write the temporary buffer sounds in the folder sonotexto placed in the Recordings Directory
 	*write { arg b1 = 0, b2 = 0, b3 = 0, b4 = 0;
 
-		// this Task routine writes each Buffer in the hard disk when argument is true. It waits 60 miliseconds to avoid writing the same name to all Buffers.
-		Task {
-			1.do{if (b1.asBoolean, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b1 mono file".postln}, {"nil"}); 0.06.wait};
-			1.do{if (b2.asBoolean, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b2 stereo file".postln}, {"nil"}); 0.06.wait};
-			1.do{if (b3.asBoolean, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b3 mono file".postln}, {"nil"}); 0.06.wait};
-			1.do{if (b4.asBoolean, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b4 stereo file".postln}, {"nil"}); 0.06.wait};
-		}.play
+		// this fork writes each Buffer in the hard disk when argument is true. It waits 60 miliseconds to avoid writing the same name to all Buffers.
+		fork {
+			if (b1.asBoolean, {~buf1.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b1-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b1 mono file".postln}, {"nil"});
+			0.06.wait;
+			if (b2.asBoolean, {~buf2.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b2-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b2 stereo file".postln}, {"nil"});
+			0.06.wait;
+			if (b3.asBoolean, {~buf3.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b3-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b3 mono file".postln}, {"nil"});
+			0.06.wait;
+			if (b4.asBoolean, {~buf4.write(Platform.recordingsDir +/+ "/sonotexto/" ++ PathName.new("~/.local/share/SuperCollider/Recordings/sonotexto").files.size.asStringToBase(10, 4) ++ "-b4-" ++ Date.localtime.stamp ++ ".wav", "WAV", "int16"); "Writing b4 stereo file".postln}, {"nil"});
+			0.06.wait;
+		}
 		^"SonoTexto Write"
 	}
 
