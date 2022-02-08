@@ -3,7 +3,9 @@ SonoTexto {
 	// the variable st means sonotexto, it is intended to make a Dictionary
 	classvar <st;
 
-	// the class method *boot check if there is a folder to write sounds and executes the document called sonotexto-synths.scd.
+	//*new {^super.new.init}
+
+	// the class method *boot check if there is a folder to write sounds and executes the document called sonotexto-synths.scd. // cambiar a init
 	*boot {
 
 		// this alerts when the sound folder sonotexto is not in the Recordings path.
