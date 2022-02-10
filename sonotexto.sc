@@ -18,7 +18,7 @@ SonoTexto {
 
 	// the class method *rec allows to rec one, or all, the available Buffers when argument is true
 	// it is possible to warn about which syhntdefs are available
-	*rec { arg b1 = 0, b2 = 0, b3 = 0, b4 = 0;
+	*rec { |b1 = 0, b2 = 0, b3 = 0, b4 = 0|
 		if (b1.asBoolean, { Synth(\b1rec); "Recording b1 mono file".postln }, { "nil" });
 		if (b2.asBoolean, { Synth(\b2rec); "Recording b2 stereo file".postln }, { "nil" });
 		if (b3.asBoolean, { Synth(\b3rec); "Recording b3 mono file".postln }, { "nil" });
@@ -27,7 +27,7 @@ SonoTexto {
 	}
 
 	// the class method *write allows to write the temporary buffer sounds in the folder sonotexto placed in the Recordings Directory
-	*write { arg b1 = 0, b2 = 0, b3 = 0, b4 = 0;
+	*write { |b1 = 0, b2 = 0, b3 = 0, b4 = 0|
 
 		// this fork writes each Buffer in the hard disk when argument is true. It waits 60 miliseconds to avoid writing the same name to all Buffers.
 		fork {
@@ -44,7 +44,7 @@ SonoTexto {
 	}
 
 	// the class method *read accesses sonotexto sound folder. A more accurate way is using the class SampleTexto
-	*read { arg server;
+	*read { |server|
 		st = Dictionary.new;
 		st.add(\st -> PathName(Platform.recordingsDir +/+ "/sonotexto/").entries.collect({ arg grabacion; Buffer.read(server ? Server.default, grabacion.fullPath) }));
 		^"SonoTexto Sounds "
