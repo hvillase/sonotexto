@@ -9,9 +9,10 @@ Ten cuidado con la retroalimentción cuando uses SonoTexto con sistemas de sonid
 SonoTexto es desarrollado en el contexto de mi investigación doctoral en Tecnología Musical con el apoyo de CONACyT a través del Posgrado en Música UNAM.
 
 ## Instrucciones
-1 Baja o clona el repositorio y pon el folder en las Extensiones de tu SuperCollider.
 
-2 Haz un directorio llamado *sonotexto* en el folder Recordings de tu SuperCollider.
+1 Baja o clona el repositorio y coloca la carpeta en las Extensiones de SuperCollider.
+
+2 Haz un directorio llamado *sonotexto* en la carpeta Recordings de SuperCollider.
 
 3 Abre un nuevo archivo en SuperCollider y haz *s.boot*.
 
@@ -19,44 +20,44 @@ SonoTexto es desarrollado en el contexto de mi investigación doctoral en Tecnol
 
 
 ```
-n = SonoTexto
+n = SonoTexto;
 
-n.boot
+n.boot;
 ```
-5 Si usas SonoTexto por primera vez te alerta que falta la carpeta sonotexto en el directorio Recordings. Corre la siguiente línea para saber donde está ese directorio.
+5 Si usas SonoTexto por primera vez te alertará que falta la carpeta <sonotexto> en el directorio Recordings. Corre la siguiente línea para saber donde está ese directorio.
 
 ```
-Platform.recordingsDir
+Platform.recordingsDir;
 ```
 
 6 Para grabar los cuatro Buffers escribe esta línea. Puedes escribir solo un buffer o reescribir cualquier buffer, 1 = verdadero, 0 = falso.
 
 ```
-n.rec(1, 1, 1, 1)
+n.rec(1, 1, 1, 1);
 ```
 
 7 Para escuchar los Buffers ejecuta estas líneas.
 
 ```
-Synth(\b1)
+Synth(\b1);
 
-Synth(\b2)
+Synth(\b2);
 
-Synth(\b3)
+Synth(\b3);
 
-Synth(\b4)
+Synth(\b4);
 ```
 
 8 Puedes reescribir los Buffers durante la improvisación, solo manten el argumento verdadero para el Buffer que quieres reescribir.
 
 ```
-n.rec(0, 1, 0, 1)
+n.rec(0, 1, 0, 1);
 ```
 
-9 Puedes conservar el sonido del Buffer. 1 = verdadero, 0 = falso.
+9 Puedes conservar el sonido del Buffer en la carpeta <sonotexto>. 1 = verdadero, 0 = falso.
 
 ```
-n.write(1, 1, 1, 1)
+n.write(1, 1, 1, 1);
 ```
 
 ## Mapeo de argumentos
@@ -102,4 +103,25 @@ Synth(\b2, [\rate, 2]);
 Synth(\b3, [\st, ~buf3.numFrames/2, \pb3, 0.5]);
 
 Synth(\b4, [\atb4, 0.5, \sb4, 8, \rb4, 1.5]);
+```
+
+### Ejemplo con un Pdef
+
+```
+s.boot;
+t=SonoTexto;
+t.boot;
+t.rec(1);
+
+(
+Pdef(\sono,
+	Pbind(\instrument, \b1,
+		\dur, Pseq([Pn(0.25, 2), 0.5, Pn(0.125, 2)], inf),
+		\rate, Pseq([1, 1.1, 0.75].mirror, inf),
+		\sb1, Pseq([0.2, 0.5, 0.1], inf),
+		\rb1, Pseq([0.5, 0.2, 0.3], inf),
+		\pb1, Pwhite(-1.0, 1.0, inf),
+		\st, ~buf1.numFrames * Ptexto([1.1, 1.5], 1, 0, inf),
+)).play
+)
 ```
