@@ -64,3 +64,25 @@ n.st[\st][4].plot;
 // Informs the number of samples in the  sonotexto folder
 
 n.info;
+
+// Example 2: using in live coding with Patterns Library
+
+s.boot;
+s.meter;
+
+t=SonoTexto;
+t.boot;
+t.rec(1, 0, 0, 0);
+
+(
+~st1=Pdef(\sonotexto,
+	Pbind(\instrument, \b1,
+		\dur, 5,
+		\ab1, 1,
+		\pb1, 0,
+		\rate, 1
+));
+)
+
+~st1.play;
+~st1.stop;

@@ -1,10 +1,10 @@
 TITLE:: SonoTexto
 summary:: Record small fragments of sound in buffers.
-categories:: Undocumented classes
-related:: Classes/SomeRelatedClass, Reference/SomeRelatedStuff
+categories:: RecordBuf
+related:: Classes/Buffer, Classes/RecordBuf, Classes/PlayBuf
 
 DESCRIPTION::
-Record the input into Buffer. The recording time is set up to 5 and 10 seconds in mono and stereo options. It is possible to save the recorded sounds into the hard disk and then read them later. It requieres to make a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
+Record the sound input into a Buffer. The recording time is set up to 5 and 10 seconds in mono and stereo options. It is possible to save the recorded sounds into the hard disk and read them later. This Class requieres to make a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
 
 
 First code examples:
@@ -13,6 +13,7 @@ code::
 ~a = SonoTexto;
 ~a = SonoTexto.boot;
 ~a = SonoTexto(1, 0, 0, 0);
+Synth(\b1);
 ::
 
 CLASSMETHODS::
@@ -53,6 +54,9 @@ Records Buffer 3 to hard disc when 1.
 
 argument:: b4
 Records Buffer 4 to hard disc when 1.
+
+METHOD:: info
+Gives information about how many sounds are in the folder sonotexto.
 
 INSTANCEMETHODS::
 
