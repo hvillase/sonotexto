@@ -86,3 +86,5 @@ t.rec(1, 0, 0, 0);
 
 ~st1.play;
 ~st1.stop;
+
+// Example 3: using sonotexto with TidalCycles (soon)
