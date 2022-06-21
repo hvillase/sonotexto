@@ -1,7 +1,7 @@
 // SonoTexto SynthDefs and Buffers
 
 (
-// Assign variables for the Buffers lenght in seconds
+// Assign variables for the Buffers length in seconds
 ~durb1 = 5;
 ~durb2 = 5;
 ~durb3 = 10;
@@ -41,7 +41,7 @@ RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneActi
 }).add
 );
 
-// Play Synth Buffer1 Mono. SynthDef have a low cut frequency at 20 hz.
+// Play Synth Buffer1 Mono. SynthDef has a low cut frequency at 20 Hz.
 (
 SynthDef(\b1, { |rate = 1, tg = 0, st = 0, lp = 0, pb1 = 0, ab1 = 1, atb1 = 0.1, sb1 = 4.8, rb1 = 0.1, ob1 = 0|
 	var sen, hpf, pan, env;
@@ -54,7 +54,7 @@ SynthDef(\b1, { |rate = 1, tg = 0, st = 0, lp = 0, pb1 = 0, ab1 = 1, atb1 = 0.1,
 }).add
 );
 
-// Play Synth Buffer2 Stereo. SynthDef have a low cut frequency at 20 hz.
+// Play Synth Buffer2 Stereo. SynthDef has a low cut frequency at 20 Hz.
 (
 SynthDef(\b2, { |rate = 1, tg = 0, st = 0, lp = 0, ab2 = 1, atb2 = 0.1, sb2 = 4.8, rb2 = 0.1, ob2 = 0|
 	var sen, hpf, env;
@@ -66,7 +66,7 @@ SynthDef(\b2, { |rate = 1, tg = 0, st = 0, lp = 0, ab2 = 1, atb2 = 0.1, sb2 = 4.
 }).add
 );
 
-// Play Synth Buffer3 Mono. SynthDef have a low cut frequency at 20 hz.
+// Play Synth Buffer3 Mono. SynthDef has a low cut frequency at 20 Hz.
 (
 SynthDef(\b3, { |rate = 1, tg = 0, st = 0, lp = 0, pb3 = 0, ab3 = 1, atb3 = 0.1, sb3 = 9.8, rb3 = 0.1, ob3 = 0|
 	var sen, hpf, pan, env;
@@ -79,7 +79,7 @@ SynthDef(\b3, { |rate = 1, tg = 0, st = 0, lp = 0, pb3 = 0, ab3 = 1, atb3 = 0.1,
 }).add
 );
 
-// Play Synth Buffer4 Stereo. SynthDef have a low cut frequency at 20 hz.
+// Play Synth Buffer4 Stereo. SynthDef has a low cut frequency at 20 Hz.
 (
 SynthDef(\b4, { |rate = 1, tg = 0, st = 0, lp = 0, ab4 = 1, atb4 = 0.1, sb4 = 9.8, rb4 = 0.1, ob4 = 0|
 	var sen, hpf, env;
