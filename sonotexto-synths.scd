@@ -1,51 +1,47 @@
-//=========================================
-// SonoTexto
-// SynthDefs and Buffers
-//=========================================
+// SonoTexto SynthDefs and Buffers
 
 (
-// Time variables for the Buffers in seconds
+// Assign variables for the Buffers lenght in seconds
 ~durb1 = 5;
 ~durb2 = 5;
 ~durb3 = 10;
 ~durb4 = 10;
 
-// Buffer allocation
-~buf1 = Buffer.alloc(s, s.sampleRate * ~durb1, 1); // odd mono
-~buf2 = Buffer.alloc(s, s.sampleRate * ~durb2, 2); // even stereo
+// Allocate Buffers, odd mono and even stereo
+~buf1 = Buffer.alloc(s, s.sampleRate * ~durb1, 1);
+~buf2 = Buffer.alloc(s, s.sampleRate * ~durb2, 2);
 ~buf3 = Buffer.alloc(s, s.sampleRate * ~durb3, 1);
 ~buf4 = Buffer.alloc(s, s.sampleRate * ~durb4, 2);
 
-// Synths to record mono and stereo Buffers:
-// mono
+// Record mono Buffer 1 with 5 seconds length
 (
 SynthDef(\b1rec, { |in = 0, ovdub = 0|
 RecordBuf.ar(SoundIn.ar(in), ~buf1.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
-// stereo
+// Record stereo Buffer 2 with 5 seconds length
 (
 SynthDef(\b2rec, { |in1 = 0, in2 = 1, ovdub = 0|
 RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf2.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
-// mono
+// Record mono Buffer 3 with 10 seconds length
 (
 SynthDef(\b3rec, { |in = 0, ovdub = 0|
 RecordBuf.ar(SoundIn.ar(in), ~buf3.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
-// stereo
+// Record stereo Buffer 4 with 10 seconds length
 (
 SynthDef(\b4rec, { |in1 = 0, in2 = 1, ovdub = 0|
 RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
-// Play Synth Buffer1 Mono. Sounds have a low cut frequency of 20 hz.
+// Play Synth Buffer1 Mono. SynthDef have a low cut frequency at 20 hz.
 (
 SynthDef(\b1, { |rate = 1, tg = 0, st = 0, lp = 0, pb1 = 0, ab1 = 1, atb1 = 0.1, sb1 = 4.8, rb1 = 0.1, ob1 = 0|
 	var sen, hpf, pan, env;
@@ -58,7 +54,7 @@ SynthDef(\b1, { |rate = 1, tg = 0, st = 0, lp = 0, pb1 = 0, ab1 = 1, atb1 = 0.1,
 }).add
 );
 
-// Play Synth Buffer2 Stereo. Sounds have a low cut frequency of 20 hz.
+// Play Synth Buffer2 Stereo. SynthDef have a low cut frequency at 20 hz.
 (
 SynthDef(\b2, { |rate = 1, tg = 0, st = 0, lp = 0, ab2 = 1, atb2 = 0.1, sb2 = 4.8, rb2 = 0.1, ob2 = 0|
 	var sen, hpf, env;
@@ -70,7 +66,7 @@ SynthDef(\b2, { |rate = 1, tg = 0, st = 0, lp = 0, ab2 = 1, atb2 = 0.1, sb2 = 4.
 }).add
 );
 
-// Play Synth Buffer3 Mono. Sounds have a low cut frequency of 20 hz.
+// Play Synth Buffer3 Mono. SynthDef have a low cut frequency at 20 hz.
 (
 SynthDef(\b3, { |rate = 1, tg = 0, st = 0, lp = 0, pb3 = 0, ab3 = 1, atb3 = 0.1, sb3 = 9.8, rb3 = 0.1, ob3 = 0|
 	var sen, hpf, pan, env;
@@ -83,7 +79,7 @@ SynthDef(\b3, { |rate = 1, tg = 0, st = 0, lp = 0, pb3 = 0, ab3 = 1, atb3 = 0.1,
 }).add
 );
 
-// Play Synth Buffer4 Stereo. Sounds have a low cut frequency of 20 hz.
+// Play Synth Buffer4 Stereo. SynthDef have a low cut frequency at 20 hz.
 (
 SynthDef(\b4, { |rate = 1, tg = 0, st = 0, lp = 0, ab4 = 1, atb4 = 0.1, sb4 = 9.8, rb4 = 0.1, ob4 = 0|
 	var sen, hpf, env;
