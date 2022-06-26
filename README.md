@@ -8,9 +8,11 @@ Be aware of feedback when you use this Class with big sound systems.
 SonoTexto is part of a series of classes I am developing for my PhD in UNAM, with the support of CONACyT through the Posgraduate Music Program UNAM.
 
 ## Instructions
-1 Download or clone the repository and put the folder in your SuperCollider Extensions.
+1 Download or clone the repository and put the folder in your SuperCollider Extensions. You can find the path to Extensions with this line.
 
-Platform.userExtensionsDir
+```
+Platform.userExtensionDir
+```
 
 2 Make a directory called *sonotexto* in your SuperCollider Recordings folder.
 
