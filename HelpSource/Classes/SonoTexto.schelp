@@ -11,8 +11,10 @@ First code examples:
 
 code::
 ~a = SonoTexto;
-~a = SonoTexto.boot;
-~a = SonoTexto(1, 0, 0, 0);
+~a.boot;
+~a.rec(1, 0, 0, 0);
+
+// Play the sound
 Synth(\b1);
 ::
 
@@ -70,6 +72,10 @@ code::
 ~a.write(1, 0, 0, 0); // writes the sound of buffer 1 to hard disk when is 1 (true)
 
 (
-Pdef(\sonotexto, Pbind(\instrument, \b1)).play;
+Pdef(\sonotexto,
+	Pbind(\instrument, \b1,
+		\dur, 5,
+		\rate, 1
+)).play;
 )
 ::
