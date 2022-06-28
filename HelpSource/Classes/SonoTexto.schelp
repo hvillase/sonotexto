@@ -4,7 +4,7 @@ categories:: RecordBuf
 related:: Classes/Buffer, Classes/RecordBuf, Classes/PlayBuf
 
 DESCRIPTION::
-Record the sound input into a Buffer. The recording time is set up to 5 and 10 seconds in mono and stereo options. It is possible to save the recorded sounds into the hard disk and read them later. This Class requieres to make a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
+Record the sound input into a Buffer. The recording time is set up to 5 and 10 seconds in mono and stereo options. It is possible to save the recorded sounds on the hard disk and read them later. This Class requires making a folder called sonotexto in the Recordings path of SuperCollider, usually in Extensions.
 
 
 First code examples:
