@@ -10,12 +10,15 @@ Record the sound input into a Buffer. The recording time is set up to 5 and 10 s
 First code examples:
 
 code::
-~a = SonoTexto;
+~a=SonoTexto;
 ~a.boot;
 ~a.rec(1, 0, 0, 0);
 
 // Play the sound
 Synth(\b1);
+
+// if there is not a <sonotexto> folder yet, create one in Recordings path
+Platform.recordingsDir;
 ::
 
 CLASSMETHODS::
@@ -66,7 +69,7 @@ INSTANCEMETHODS::
 EXAMPLES::
 
 code::
-~a = SonoTexto; // creates sonotexto object
+~a=SonoTexto; // creates sonotexto object
 ~a.boot; // prepares the four buffers to record sound.
 ~a.rec(1, 0, 0, 0); // records buffer 1 when is 1 (true)
 ~a.write(1, 0, 0, 0); // writes the sound of buffer 1 to hard disk when is 1 (true)
