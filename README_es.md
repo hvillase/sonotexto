@@ -73,7 +73,7 @@ Cada SynthDef tiene estos argumentos:
 \b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
 ```
 
-**rate***: puedes modificar la velocidad de la muestra en valores distintos a 0, ej. 1 es la velocidad normal, 2 es el doble de la velocidad, 0.5 es la mitad de la velocidad. Puedes usar valores negativos como -1 y si el valor del parametro de loop es 1, entonces puedes tocar las muestras en reversa.
+**rate**: puedes modificar la velocidad de la muestra en valores distintos a 0, ej. 1 es la velocidad normal, 2 es el doble de la velocidad, 0.5 es la mitad de la velocidad. Puedes usar valores negativos como -1 y si el valor del parametro de loop es 1, entonces puedes tocar las muestras en reversa.
 
 **tg**: este regresa la reproducción al punto de inicio de la muestra dependiendo de la frecuencia. Puedes poner valores desde 0 hasta los más alto.
 
