@@ -81,7 +81,7 @@ Cada SynthDef tiene estos argumentos:
 
 **loop**: puedes poner valores de 0 o 1. 0 inactiva el loop, 1 activa el loop.
 
-**pb1**: or **pb3** es el valor de paneo para los buffes 1 y 3. Estos buffers son mono, puedes mover el sonido entre izquierda (-1.0) y derecha (1.0).
+**pb1** or **pb3**: es el valor de paneo para los buffes 1 y 3. Estos buffers son mono, puedes mover el sonido entre izquierda (-1.0) y derecha (1.0).
 
 **ab1** ... **abn**: este es el valor de amplitud. Usually you multiply amp between 0 and 1 as a normalized value. Como estas trabajando con sonido grabado en el momento algunas veces necesitas ir más allá de 1. Escucha que tanto vas más allá y ten mucho cuidado si vuelves a grabar otra vez en ese buffer porque puedes cuasar una fuerte retroalimentación. Estoy buscando una solución para tener una forma más conveniente de usar este parámetro.
 

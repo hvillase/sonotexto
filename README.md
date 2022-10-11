@@ -90,7 +90,7 @@ Each SynthDef has these arguments:
 
 **loop**: you can put values from 0 to 1. 0 is loop inactive, and 1 is loop active.
 
-**pb1**: or **pb3** is the pan value for buffers 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
+**pb1** or **pb3**: is the pan value for buffers 1 and 3. These buffers are mono, you can move the sound between Left (-1.0) and Right (1.0).
 
 **ab1** ... **abn**: this is the amplitude value. Usually, you multiply amp between 0 and 1 as a normalized value. As you are working with recorded sound at the moment sometimes you need to go beyond 1. You may listen to how much you go beyond 1, and be extremely careful if you record again a buffer as you can have strong feedback. I am looking for a solution to have a more convenient way to approach this parameter.
 

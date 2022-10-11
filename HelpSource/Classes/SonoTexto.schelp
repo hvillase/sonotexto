@@ -75,8 +75,9 @@ code::
 ~a.write(1, 0, 0, 0); // writes the sound of buffer 1 to hard disk when is 1 (true)
 
 // Synth parameters
-Synth(\b1, [\rate, \tg, \st, \lp, \pb1, \ab1, \atb1, \sb1, \rb1, \ob1]);
-Synth(\b2, []);
+Synth(\b1, [\rate, 1, \tg, 0, \st, 0, \lp, 0, \pb1, 0, \ab1, 1, \atb1, 0.1, \sb1, 4.8, \rb1, 0.1, \ob1, 0]);
+Synth(\b2, [\rate, 1, \tg, 0, \st, 0, \lp, 0, \ab2, 1, \atb2, 0.1, \sb2, 4.8, \rb2, 0.1, \ob2, 0]);
+
 (
 Pdef(\sonotexto,
 	Pbind(\instrument, \b1,
