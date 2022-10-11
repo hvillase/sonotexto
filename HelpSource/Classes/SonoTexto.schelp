@@ -74,11 +74,14 @@ code::
 ~a.rec(1, 0, 0, 0); // records buffer 1 when is 1 (true)
 ~a.write(1, 0, 0, 0); // writes the sound of buffer 1 to hard disk when is 1 (true)
 
+// Synth parameters
+Synth(\b1, [\rate, \tg, \st, \lp, \pb1, \ab1, \atb1, \sb1, \rb1, \ob1]);
+Synth(\b2, []);
 (
 Pdef(\sonotexto,
 	Pbind(\instrument, \b1,
 		\dur, 5,
 		\rate, 1
 )).play;
-)
+);
 ::

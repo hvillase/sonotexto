@@ -66,11 +66,11 @@ Cada SynthDef tiene estos argumentos:
 ```
 \b1: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
 
-\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
+\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
 
 \b3: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
 
-\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
+\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
 ```
 
 **rate***: puedes modificar la velocidad de la muestra en valores distintos a 0, ej. 1 es la velocidad normal, 2 es el doble de la velocidad, 0.5 es la mitad de la velocidad. Puedes usar valores negativos como -1 y si el valor del parametro de loop es 1, entonces puedes tocar las muestras en reversa.

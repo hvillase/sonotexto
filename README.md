@@ -75,11 +75,11 @@ Each SynthDef has these arguments:
 ```
 \b1: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb1 = pan, ab1 = amp, atb1 = attack, sb1 = sustain, rb1 = release, ob1 = out
 
-\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb2 = pan, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
+\b2: rate = rate, tg = trigger frequency, st = startPos, lp = loop, ab2 = amp, atb2 = attack, sb2 = sustain, rb2 = release, ob2 = out
 
 \b3: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb3 = pan, ab3 = amp, atb3 = attack, sb3 = sustain, rb3 = release, ob3 = out
 
-\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, pb4 = pan, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
+\b4: rate = rate, tg = trigger frequency, st = startPos, lp = loop, ab4 = amp, atb4 = attack, sb4 = sustain, rb4 = release, ob4 = out
 ```
 
 **rate**: you can modify the speed of the sample in values other than 0, eg. 1 is normal speed, 2 is twice the speed, 0.5 is half the speed. You can use minus values as -1 and if the value of the loop parameter is 1, then you can play samples in reverse.
