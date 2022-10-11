@@ -86,7 +86,7 @@ Each SynthDef has these arguments:
 
 **tg**: this returns the playback to the start point of the sample depending on the frequency. You can put values from 0 to higher.
 
-**st**: this is the initial point from which the sample starts to play. You can modify this number by multiplying or dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at the half of the sample. Be careful not to divide in 1, otherwise you have no sound because you are starting at the end of the sample.
+**st**: this is the initial point from which the sample starts to play. You can modify this number by multiplying or dividing the numFRames of the sample. eg. ~buf1.numFrames/2 will start at half of the sample. Be careful not to divide or multuply by 1, otherwise, you have no sound because you are getting the number of samples to start at the end of the sample.
 
 **loop**: you can put values from 0 to 1. 0 is loop inactive, and 1 is loop active.
 
