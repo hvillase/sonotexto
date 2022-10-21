@@ -1,6 +1,6 @@
 // SonoTexto class
 // This is a class to record, play and save sounds of 5 and 10 seconds duration
-// It is intended to use during a live coding performance but can be used to compose music
+// It was developed for a live coding performance but can be used to compose music
 
 SonoTexto {
 
