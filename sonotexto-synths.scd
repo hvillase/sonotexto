@@ -16,28 +16,28 @@
 // Record mono Buffer 1 with 5 seconds length
 (
 SynthDef(\b1rec, { |in = 0, ovdub = 0|
-RecordBuf.ar(SoundIn.ar(in), ~buf1.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
+	RecordBuf.ar(SoundIn.ar(in), ~buf1.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
 // Record stereo Buffer 2 with 5 seconds length
 (
 SynthDef(\b2rec, { |in1 = 0, in2 = 1, ovdub = 0|
-RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf2.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
+	RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf2.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
 // Record mono Buffer 3 with 10 seconds length
 (
 SynthDef(\b3rec, { |in = 0, ovdub = 0|
-RecordBuf.ar(SoundIn.ar(in), ~buf3.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
+	RecordBuf.ar(SoundIn.ar(in), ~buf3.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
 // Record stereo Buffer 4 with 10 seconds length
 (
 SynthDef(\b4rec, { |in1 = 0, in2 = 1, ovdub = 0|
-RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
+	RecordBuf.ar(SoundIn.ar([in1, in2]), ~buf4.bufnum, 0, 1, ovdub, loop:0, doneAction:2);
 }).add
 );
 
