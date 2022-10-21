@@ -13,9 +13,11 @@ code::
 ~a=SonoTexto;
 ~a.boot;
 ~a.rec(1, 0, 0, 0);
+~a.rec(0, 1, 0, 0);
 
 // Play the sound
 Synth(\b1);
+Synth(\b2);
 
 // if there is not a <sonotexto> folder yet, create one in Recordings path
 Platform.recordingsDir;
